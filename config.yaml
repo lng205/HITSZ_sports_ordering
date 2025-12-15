@@ -1,0 +1,11 @@
+# 用户配置
+user:
+  student_id: "20231234567"    # 学号
+  name: "张三"                  # 姓名
+  phone: "13800138000"         # 手机号
+  image_url: ""                # 头像URL（使用HTTPS抓包获取，时效30天+）
+  token: "hEBOountLgwjBUl4FW9Vv2GGOpmoIQR1FLzRT2TuFROh9gW36DLe2VY5L8Jzp0m7-oVsbQ"                    # 认证令牌（使用HTTPS抓包获取，时效48小时）
+
+# 数据库配置
+database:
+  path: "sports-order.db"

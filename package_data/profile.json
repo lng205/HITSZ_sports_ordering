@@ -1,0 +1,210 @@
+{
+    "code": 0,
+    "data": {
+        "fileLifeCycle": {
+            "qbq7lqHseqa2a68d88f": {
+                "expireAt": 1791604408000,
+                "uploadTime": "2025-10-10 11:53:28",
+                "fileStatus": 0
+            },
+            "qR3ndl0UaX_790159b2": {
+                "expireAt": 1758263778000,
+                "uploadTime": "2024-09-19 14:36:18",
+                "fileStatus": -2
+            },
+            "qR6nJaSbKec2697db6e": {
+                "expireAt": 1758677966000,
+                "uploadTime": "2024-09-24 09:39:26",
+                "fileStatus": -2
+            },
+            "qR3n_Fhrs9C6591c3b7": {
+                "expireAt": 1758263603000,
+                "uploadTime": "2024-09-19 14:33:23",
+                "fileStatus": -2
+            },
+            "qbqm3SLUdH8cbe13ed7": {
+                "expireAt": 1791601448000,
+                "uploadTime": "2025-10-10 11:04:08",
+                "fileStatus": -2
+            },
+            "qbqmB4LK01O84b8f21a": {
+                "expireAt": 1791601414000,
+                "uploadTime": "2025-10-10 11:03:34",
+                "fileStatus": -2
+            },
+            "qR3o16tt5mR403e28f4": {
+                "expireAt": 1758247917000,
+                "uploadTime": "2024-09-19 10:11:57",
+                "fileStatus": -2
+            }
+        },
+        "icon": "https://oss1.qun100.com/Zjli/V2/userIcon/qTMxncJCzvW62ab2e37.jpg?audit=10",
+        "nickname": "L_KaIS .",
+        "fuid": "1575666423746060289",
+        "actualCreatorFuid": "1568731811508510721",
+        "type": "ACTIVITY_V2",
+        "formId": "1627049420674297856",
+        "upgradeNo": 1,
+        "title": "羽毛球馆场地预约（个人）",
+        "contents": [
+            {
+                "type": "WORD",
+                "content": "预约须知\n1、开放时间：8：00-22：00 \n2、预约时间：提前两天早8：00开放预约\n3、团体活动安排：①教师羽协场地时间：每周三 18:00-21:00 (1-6号场）、每周日 15:00-18:00 (1-4号场)  ②许坤老师训练场地时间：每周三 21:00-22:00 (1-6号场）、每周日 13:00-15:00 (1-6号场） ③学生羽协场地时间：每周二 19:00-22:00 (1-6号场）、每周五 08:00-12:00、19:00-22:00 (1-6号场）\n注：每周日15:00-18:00 (5-6号场)无需预约，场地先到先得。\n4、遇校区大型活动，以大型活动为优先，活动取消将以通知形式告知。可扫描下方二维码查询近期大型活动时间安排。\n5、若需取消场地使用，请至少提前两小时通过小程序取消。爽约两次及两次以上的，取消本学期使用资格。\n6、请确保姓名、手机号、校园卡号等个人信息填写正确。\n7、场地仅供本校师生本人使用，物业会在后台先对球场当天的预约信息进行核查，若信息不符合本校师生，会直接删除预留信息。师生需配合工作人员进行身份查验。经发现或举报买卖、转让场地的，取消预约本人学期使用资格。"
+            },
+            {
+                "type": "THUMBNAIL",
+                "content": [
+                    "https://oss3.qun100.com/NTBiYzUw/V2/form1/qbq7lqHseqa2a68d88f.jpg"
+                ],
+                "fileAuditList": [
+                    {
+                        "fileUrl": "https://oss3.qun100.com/NTBiYzUw/V2/form1/qbq7lqHseqa2a68d88f.jpg",
+                        "auditStatus": 0
+                    }
+                ]
+            }
+        ],
+        "config": {
+            "actBeginTime": "2024-09-19 10:11:00",
+            "actEndTime": "2025-12-31 00:11:00",
+            "cycle": {
+                "frequency": 0,
+                "showNoParticipant": true,
+                "allowPatch": false,
+                "allowPatchTimes": -1,
+                "patchTimesLimitType": 0,
+                "type": 0,
+                "customDays": 0,
+                "punchType": 0
+            },
+            "limit": -1,
+            "perLimit": -1,
+            "formDataPermission": 2,
+            "allowModify": true,
+            "allowModifyScope": -1,
+            "finishTip": {
+                "ruleType": "DEFAULT",
+                "type": "DEFAULT"
+            },
+            "relay": 0,
+            "allowCopy": 0,
+            "allowLike": true,
+            "allowComment": true,
+            "allowOtherComment": true,
+            "fillPosition": 1,
+            "revisionSwitch": true,
+            "allowPatch": false,
+            "submitBtnName": {
+                "type": "PREDEFINED",
+                "content": "SOLITAIRE"
+            },
+            "pageStyle": {
+                "showRecordQuestionTitle": true,
+                "showFlowStatusFilter": false,
+                "showQuickPsRateEntrance": true
+            },
+            "apiConfigList": [],
+            "showExamAnswer": 0,
+            "authOpen": {
+                "avatarNickname": true
+            },
+            "ranking": {
+                "type": 1
+            },
+            "anonymous": false
+        },
+        "status": 2,
+        "expStatus": 0,
+        "createTime": "2024-09-19 10:11:56",
+        "modifyTime": "2025-12-12 12:25:05",
+        "owner": false,
+        "manager": false,
+        "managerType": null,
+        "cover": "https://oss2.qun100.com/ZDg5/V2/form1/qR3n_Fhrs9C6591c3b7.jpg",
+        "coverAuditStatus": 10,
+        "hasParticipation": true,
+        "normalSize": 11220,
+        "allDataSize": 12225,
+        "isOvertForm": false,
+        "version": 245,
+        "extra": {
+            "vip": 0,
+            "hideAdv": false,
+            "hideOpera": false,
+            "hasAchievedDataCount": true,
+            "hideFormFlowAdv": false,
+            "hideCustomQrCodeLogo": false,
+            "componentConfig": {
+                "videoMaxByte": "104857600"
+            },
+            "isGuideOwner": false,
+            "creatorNotShowSubmitEndPage": false,
+            "allUserNotShowSubmitEndPage": false,
+            "hideDownloadExcel": false,
+            "hideDownloadExcelImage": false,
+            "hideDownloadImage": false
+        },
+        "rateConfig": {
+            "fid": "1627049423446732805",
+            "formId": "1627049420674297856",
+            "items": [
+                {
+                    "rid": "1627049423446732801",
+                    "value": "优秀",
+                    "status": 1
+                },
+                {
+                    "rid": "1627049423446732802",
+                    "value": "良好",
+                    "status": 1
+                },
+                {
+                    "rid": "1627049423446732803",
+                    "value": "及格",
+                    "status": 1
+                },
+                {
+                    "rid": "1627049423446732804",
+                    "value": "不及格",
+                    "status": 1
+                },
+                {
+                    "rid": "-1",
+                    "value": "暂不标记",
+                    "status": 1
+                }
+            ],
+            "version": 1
+        },
+        "shareImage": "https://oss2.qun100.com/ZjM3/V2/form1/qR3ndl0UaX_790159b2.jpg",
+        "shareImageAuditStatus": 10,
+        "groupId": "1627048979100876800",
+        "groupName": "活动中心羽毛球预约",
+        "showGroupName": false,
+        "quickComments": [
+            "您好，因活动中心一楼场地进行维护，具体开放时间待定，26日场地暂不能使用，后台已关闭。您原预定的26日场地，可留意小程序是否有重新开放，知悉！🌹",
+            "您好，因活动中心一楼场地进行维护，不对外开放，您原预定的24日场地无法使用，请您知悉！🌹",
+            "同学好，因4月16、17日活动中心临时有活动，您原预定的球场打球已取消，因电话未联系上，请知晓，勿跑空，感谢您的谅解！开放时间可留意群报数❤️",
+            "请使用校园卡学号那面的照片和规范填写校园卡号，超三次违规，将取消您的预约场次，谢谢配合～",
+            "您好，这是您第二次违规上传照片，第三次违规将直接取消您的预约。",
+            "请规范填写校园卡号，超三次违规填写，将取消您的预约场次，谢谢配合～",
+            "请使用校园卡学号那面的照片，超三次违规使用不相关照片，将取消您的预约场次，谢谢配合～",
+            "请下次使用校园卡照片～",
+            "非常棒，继续努力加油！",
+            "不错哦，继续努力！",
+            "加油，继续努力！",
+            "很棒，继续坚持！",
+            "完成得很好！",
+            "点赞，棒棒哒～",
+            "赞一个！",
+            "进步很大哦，继续努力，看好你！"
+        ],
+        "storageSpaceDetail": {
+            "usedRate": "0.1266",
+            "inRegularLimitDelayTime": true
+        },
+        "qrCodeShowStatus": 1,
+        "displayFiveStar": false,
+        "isActualCreator": false
+    }
+}
