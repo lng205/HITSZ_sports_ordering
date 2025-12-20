@@ -15,17 +15,23 @@
 
 ```
 sports_ordering/
-├── config.yaml          # 配置文件
+├── config.yaml          # 配置文件 (生成)
 ├── Makefile             # 构建脚本
-├── sports-order         # 编译后的可执行文件
+├── sports-order         # 编译后的可执行文件 (生成)
 ├── database/
 │   ├── init.sql         # 数据库初始化脚本
 │   └── add_order.sh     # 交互式订单管理脚本
+├── image/               # 文档图片
+├── package_data/        # 抓包数据样本
+│   ├── catalog.json
+│   └── profile.json
 └── source/
     ├── main.go          # 程序入口
     ├── api.go           # HTTP 客户端
     ├── repository.go    # 数据库操作层
+    ├── booking_test.go  # API 集成测试
     ├── go.mod           # Go 模块配置
+    ├── go.sum
     ├── common/          # 公共模块
     │   ├── constants.go # 常量定义
     │   ├── interfaces.go# 接口定义
@@ -71,39 +77,33 @@ git clone <repository-url>
 cd sports_ordering
 ```
 
-### 2. 初始化数据库
+### 2. 初始化项目
+
+一键生成配置文件并初始化数据库：
 
 ```bash
-make init-db
+make init
 ```
 
 ### 3. 配置用户信息
 
-编辑 `config.yaml` 文件，填写你的个人信息：
+编辑 `config.yaml` 文件，填写你的个人信息（详细抓包教程见下文）：
 
 ```yaml
 # 用户配置
 user:
   student_id: "你的学号"
-  name: "你的姓名"
-  phone: "你的手机号"
-  image_url: ""    # 校园卡照片URL
+  ...
   token: ""        # 认证令牌
 ```
 
-**抓包获取 `image_url` 和 `token`**:
+### 4. 编译程序
 
-这两个关键字段都需要通过抓包获取，具体说明如下：
+```bash
+make build
+```
 
-*   **`image_url`**:
-    *   **作用**: 这是你校园卡照片的URL。在小程序中按要求上传校园卡照片后，小程序会将图片存储在阿里云OSS上。
-    *   **获取**: 之后每次打开小程序，它都会请求一个以 `https://qun-prod3-tmp.oss-cn-beijing.aliyuncs.com` 类似开头的URL来加载这张图片。通过抓包工具捕获这个请求，将其完整的URL填入此字段。
-
-*   **`token`**:
-    *   **作用**: 这是小程序接口的认证令牌，有效期约48小时。
-    *   **获取**: 详细获取方法请参考本文档的 **“关于 Token”** 章节。
-
-### 4. 添加预约订单
+### 5. 添加预约订单
 
 使用交互式脚本管理订单：
 
@@ -124,12 +124,6 @@ make add-order
 INSERT INTO orders (date, hour, venue, status) VALUES
 ('2025-12-16', 15, 4, 'PENDING'),  -- 12月16日 15:00-16:00 4号场地
 ('2025-12-16', 16, 4, 'PENDING');  -- 12月16日 16:00-17:00 4号场地
-```
-
-### 5. 编译程序
-
-```bash
-make build
 ```
 
 ### 6. 配置定时任务
@@ -163,9 +157,10 @@ crontab -l
 
 | 命令 | 说明 |
 |------|------|
+| `make help` | 显示帮助信息 |
+| `make init` | 初始化项目（配置 + 数据库） |
 | `make build` | 编译 Go 程序 |
 | `make test` | 运行 API 集成测试 |
-| `make init-db` | 初始化数据库 |
 | `make add-order` | 交互式订单管理 |
 
 ## 测试说明
@@ -232,6 +227,28 @@ crontab -l
 | message | TEXT | 日志消息 |
 | order_id | INTEGER | 关联订单ID（可为空） |
 | created_at | DATETIME | 创建时间 |
+
+## 查看日志
+
+系统日志分为**运行输出日志**和**数据库业务日志**两部分。
+
+### 1. 运行输出
+- **手动运行**: 直接显示在终端。
+- **定时任务**: 默认输出到 `/var/log/sports-order.log` (取决于 crontab 配置)。
+
+### 2. 数据库业务日志
+系统会将详细的业务操作记录（如预约请求、结果状态）存储在数据库的 `logs` 表中。
+
+#### 命令行查看
+```bash
+sqlite3 sports-order.db "SELECT * FROM logs ORDER BY created_at DESC LIMIT 20;"
+```
+
+#### VS Code 查看 (推荐)
+如果你习惯使用 VS Code，可以使用 **SQLite Viewer** 插件进行可视化查看：
+1. 在 VS Code 扩展商店搜索并安装 `SQLite Viewer`。
+2. 在资源管理器中点击 `sports-order.db` 文件。
+3. 选择 `logs` 表，即可清晰地浏览、筛选和查询日志数据。
 
 ## 工作原理
 
