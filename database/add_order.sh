@@ -297,7 +297,7 @@ batch_add_orders() {
         sqlite3 "$DB_FULL_PATH" \
             "INSERT INTO orders (date, hour, venue, status) VALUES ('$input_date', $hour, $input_venue, 'PENDING');"
         if [ $? -eq 0 ]; then
-            ((success_count++))
+            success_count=$((success_count + 1))
         fi
     done
     
